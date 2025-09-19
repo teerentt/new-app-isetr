@@ -1,0 +1,9 @@
+<p>todo works!</p>
+<h1>Listes des taches a faire</h1>
+<ul>
+    @for (item of tasks; track item.id) {
+        <li>{{item.id}} {{item.title}} <button (click)="remove(item.id)">Delete</button><button (click)="update(item.id)">update</button></li>
+    }
+</ul>
+<input [(ngModel)]="input"/>
+<button (click)="add(input)">Add task</button>
